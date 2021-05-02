@@ -107,7 +107,14 @@ namespace Adress_Book
                 } //end of edit() method
             }
         }
-       
+        static public void displayPerson()
+        {
+            Console.WriteLine("\nEntered Person Details is:");
+            foreach (var person in People)
+            {
+                Console.WriteLine("FirstName: {0}\t LastName: {1}\t city: {2}\t state: {3}\t email: {4}\t phoneNumber: {5}", person.FirstName, person.LastName, person.city, person.state, person.email, person.phoneNumber);
+            }
+        }
         public static void remove()
         {// Enter the name of person to remove
             Console.WriteLine("Enter the first name of the person you would like to remove.");
